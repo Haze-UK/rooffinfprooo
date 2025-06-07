@@ -8,21 +8,12 @@
 .why-us-background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), #8e0000);
+  background: linear-gradient(to top, #000000, #8e0000);
   z-index: 0;
 }
 
-.why-us-background::after {
-  position: absolute;
-  inset: 0;
-  background: url('assets/testi.jpg') no-repeat center center/cover;
-  opacity: 0.12;
-  z-index: 1;
-  content: '';
-}
-
 .why-us-title {
-  font-size: 1.5rem; /* Matches testimonial title scale */
+  font-size: 1.5rem;
   font-weight: 700;
   color: white;
   text-align: center;
@@ -54,11 +45,18 @@
   flex: 1 1 300px;
   max-width: 350px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
 }
 
 .why-card:hover {
   transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+}
+
+.why-card .icon {
+  font-size: 2.2rem;
+  color: #e30613;
+  margin-bottom: 15px;
 }
 
 .why-card h3 {
