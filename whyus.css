@@ -1,17 +1,35 @@
 .why-us-section {
-  padding: 80px 20px;
-  background-color: #111;
-  text-align: center;
+  position: relative;
+  padding: 100px 20px;
+  overflow: hidden;
+  z-index: 1;
 }
 
-.section-title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  margin-bottom: 50px;
+.why-us-background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), #8e0000);
+  z-index: 0;
+}
+
+.why-us-background::after {
+  position: absolute;
+  inset: 0;
+  background: url('assets/testi.jpg') no-repeat center center/cover;
+  opacity: 0.12;
+  z-index: 1;
+  content: '';
+}
+
+.why-us-title {
+  font-size: 1.5rem; /* Matches testimonial title scale */
+  font-weight: 700;
   color: white;
-  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 50px;
   position: relative;
   z-index: 2;
+  text-transform: uppercase;
 }
 
 .why-us-cards {
@@ -19,40 +37,56 @@
   flex-wrap: wrap;
   gap: 30px;
   justify-content: center;
+  z-index: 2;
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
-  z-index: 2;
 }
 
 .why-card {
   background: rgba(255, 255, 255, 0.08);
   backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  padding: 30px;
+  border-radius: 16px;
+  padding: 40px 30px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   flex: 1 1 300px;
   max-width: 350px;
-  color: white;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .why-card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-6px);
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
 .why-card h3 {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
   margin-bottom: 15px;
   color: white;
-  text-transform: uppercase;
-  font-weight: 700;
 }
 
 .why-card p {
-  color: #ddd;
   font-size: 0.95rem;
-  line-height: 1.5;
+  color: #ddd;
+  line-height: 1.6;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+  .why-us-section {
+    padding: 80px 20px;
+  }
+
+  .why-card {
+    padding: 30px 20px;
+    flex: 1 1 100%;
+  }
+
+  .why-us-title {
+    font-size: 1.3rem;
+  }
 }
