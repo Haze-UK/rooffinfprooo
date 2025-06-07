@@ -23,7 +23,7 @@ body {
 .testimonial-background {
   position: absolute;
   inset: 0;
- 
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), #8e0000 );
   z-index: 0;
 }
 
