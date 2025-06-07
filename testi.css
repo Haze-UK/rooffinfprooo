@@ -30,7 +30,7 @@ body {
 .testimonial-background::after {
   position: absolute;
   inset: 0;
-  background: url('https://i.imgur.com/0IgyRY3.jpg') no-repeat center center/cover;
+  background: url('assets/testi.jpg') no-repeat center center/cover;
   opacity: 0.12;
   z-index: 1;
   content: '';
