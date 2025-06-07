@@ -8,11 +8,9 @@
 .why-us-background {
   position: absolute;
   inset: 0;
-  background: #8e0000 
+  background-color: #8e0000;
   z-index: 0;
 }
-
-
 
 .why-us-title {
   font-size: 1.5rem;
