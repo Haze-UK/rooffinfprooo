@@ -17,13 +17,13 @@ const testimonials = [
     text: "Peter was excellent in every aspect of the build. He handled the project smoothly and professionally. The flat roof turned out great. Highly skilled and trustworthy.",
     author: "Zahir Boden.",
     meta: "3 week ago · Google"
-  }
+  },
       {
     stars: 5,
     text: "Eddie did an amazing job on our flat roof. He worked with a high level of precision and care. His professionalism stood out. The result exceeded expectations.",
     author: "Orlando Yael.",
     meta: "1 week ago · Google"
-  }
+  },
       {
     stars: 5,
     text: "James handled our new flat roof project like a pro. He stayed organized and delivered great results. Very efficient and easy to work with. Superb job.",
