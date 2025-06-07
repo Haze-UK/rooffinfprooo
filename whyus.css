@@ -5,12 +5,7 @@
   z-index: 1;
 }
 
-.why-us-background {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 0px, #8e0000 60px, #8e0000 100%);
-  z-index: 0;
-}
+
 
 .why-us-title {
   font-size: 1.5rem;
