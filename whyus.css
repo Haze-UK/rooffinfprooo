@@ -8,7 +8,7 @@
 .why-us-background {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, #8e0000 0%, #000000 150px);
+  background: linear-gradient(to top, #8e0000 0%, #000000 150px);
   z-index: 0;
 }
 
