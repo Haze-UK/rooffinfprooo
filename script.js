@@ -58,16 +58,21 @@ if (container) {
   }, 5000); // Change testimonial every 5 seconds
 }
 
-// Hamburger menu toggle
-document.getElementById('menuToggle').addEventListener('click', () => {
-  document.getElementById('mobileMenu').classList.toggle('active');
-  document.getElementById('settingsPanel').classList.remove('active'); // Close settings if open
+const menuToggle = document.getElementById('menuToggle');
+const mobileMenu = document.getElementById('mobileMenu');
+const settingsToggle = document.getElementById('settingsToggle');
+const settingsPanel = document.getElementById('settingsPanel');
+
+menuToggle.addEventListener('click', () => {
+  const isActive = mobileMenu.classList.contains('active');
+  mobileMenu.classList.toggle('active', !isActive);
+  settingsPanel.classList.remove('active');
 });
 
-// Settings panel toggle
-document.getElementById('settingsToggle').addEventListener('click', () => {
-  document.getElementById('settingsPanel').classList.toggle('active');
-  document.getElementById('mobileMenu').classList.remove('active'); // Close menu if open
+settingsToggle.addEventListener('click', () => {
+  const isActive = settingsPanel.classList.contains('active');
+  settingsPanel.classList.toggle('active', !isActive);
+  mobileMenu.classList.remove('active');
 });
 
 
