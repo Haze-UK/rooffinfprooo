@@ -1,36 +1,47 @@
+/* RESET & BASE STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: black;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* SECTION: Find Us On The Map */
 .map-section {
   position: relative;
+  width: 100%;
   padding: 100px 20px;
-  z-index: 1;
+  background: linear-gradient(to bottom, rgba(142, 0, 0, 0.95), rgba(0, 0, 0, 0.1));
   overflow: hidden;
 }
 
-.map-gradient-bg {
+.map-section::before {
+  content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, #8e0000 5%, rgba(0, 0, 0, 0.15) 95%),
-              url('/path-to-uploaded-image/39986663-7293-464b-839b-b3cf87b41061.png') center/cover no-repeat;
-  opacity: 0.25;
+  background: url('assets/map-bg.jpg') center center/cover no-repeat;
+  opacity: 0.1;
   z-index: 0;
 }
 
-.map-glass-card {
+/* Centered Container */
+.map-container {
   position: relative;
-  max-width: 700px;
+  z-index: 1;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 40px 30px;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  border-radius: 20px;
-  backdrop-filter: blur(12px);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-  z-index: 2;
   text-align: center;
 }
 
-/* Reuse section title styling */
+/* Header matching others */
 .section-header {
-  font-size: 2rem;
+  font-size: 1.8rem;
   font-weight: 700;
   color: #ffffff;
   text-transform: uppercase;
@@ -38,10 +49,29 @@
   margin-bottom: 30px;
 }
 
-/* CTA Button */
+/* Glass Box */
+.map-glass-box {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+  margin-bottom: 30px;
+}
+
+/* Embedded Map */
+.map-embed iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  border-radius: 10px;
+}
+
+/* CTA Button with bounce */
 .map-cta {
   display: inline-block;
-  margin-top: 30px;
+  margin-top: 10px;
   padding: 14px 28px;
   background: #8e0000;
   color: white;
@@ -49,8 +79,34 @@
   font-weight: bold;
   border-radius: 8px;
   transition: background 0.3s ease;
+  animation: bounce 2.5s infinite;
 }
 
 .map-cta:hover {
   background: #a30000;
+}
+
+/* Bounce Animation */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* Mobile Optimisation */
+@media (max-width: 768px) {
+  .map-section {
+    padding: 80px 20px;
+  }
+
+  .section-header {
+    font-size: 1.5rem;
+  }
+
+  .map-embed iframe {
+    height: 250px;
+  }
 }
