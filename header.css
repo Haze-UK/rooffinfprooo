@@ -1,15 +1,4 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Arial', sans-serif;
-  background: #fff;
-  color: #111;
-}
-
+/* Top Bar */
 .top-bar {
   display: flex;
   justify-content: space-between;
@@ -17,6 +6,8 @@ body {
   background-color: #ae0808;
   padding: 6px 12px;
   font-size: 14px;
+  z-index: 1000;
+  position: relative;
 }
 
 .icon-button i,
@@ -30,6 +21,7 @@ body {
   gap: 12px;
 }
 
+/* Main Header */
 .main-header {
   display: flex;
   justify-content: space-between;
@@ -37,34 +29,52 @@ body {
   background: #000;
   padding: 20px;
   position: relative;
+  z-index: 1000;
 }
 
 .logo img {
-  height: 80px;
+  height: 70px;
   max-width: 100%;
 }
 
+/* Hamburger Icon */
 .menu-icon {
-  width: 30px;
-  cursor: pointer;
+  width: 28px;
+  height: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 20px;
-  z-index: 999;
+  cursor: pointer;
+  z-index: 1001;
 }
 
 .menu-icon span {
+  display: block;
   height: 3px;
   background: #fff;
   border-radius: 2px;
+  transition: all 0.3s ease;
 }
 
+/* Optional: transform hamburger into 'X' on open */
+.slide-menu.active ~ .main-header .menu-icon span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.slide-menu.active ~ .main-header .menu-icon span:nth-child(2) {
+  opacity: 0;
+}
+
+.slide-menu.active ~ .main-header .menu-icon span:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Settings Icon */
 .settings-icon i {
   font-size: 22px;
   color: #fff;
   cursor: pointer;
-  z-index: 999;
+  z-index: 1001;
 }
 
 /* Slide Menu */
@@ -74,11 +84,12 @@ body {
   left: -260px;
   width: 240px;
   height: 100%;
-  background: #111;
+  background: rgba(0, 0, 0, 0.96);
+  backdrop-filter: blur(12px);
   color: #fff;
-  padding: 60px 20px;
+  padding: 80px 24px;
   transition: left 0.3s ease;
-  z-index: 998;
+  z-index: 999;
 }
 
 .slide-menu.active {
@@ -97,6 +108,11 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.slide-menu ul li a:hover {
+  color: #e30613;
 }
 
 /* Settings Panel */
@@ -106,11 +122,12 @@ body {
   right: -260px;
   width: 240px;
   height: 100%;
-  background: #1a1a1a;
+  background: rgba(20, 20, 20, 0.95);
+  backdrop-filter: blur(12px);
   color: #fff;
-  padding: 60px 20px;
+  padding: 80px 24px;
   transition: right 0.3s ease;
-  z-index: 998;
+  z-index: 999;
 }
 
 .settings-panel.active {
@@ -126,4 +143,21 @@ body {
   display: block;
   margin-bottom: 16px;
   font-size: 16px;
+}
+
+/* Mobile Optimisation */
+@media (max-width: 768px) {
+  .logo img {
+    height: 55px;
+  }
+
+  .menu-icon {
+    width: 26px;
+    height: 18px;
+  }
+
+  .slide-menu,
+  .settings-panel {
+    width: 100%;
+  }
 }
