@@ -75,17 +75,6 @@ if (container) {
     mobileMenu.classList.remove('active'); // Close menu
     menuToggle.classList.remove('active'); // Reset icon to hamburger
   });
-
-  // Optional: close menus when clicking outside
-  document.addEventListener('click', (e) => {
-    if (!e.target.closest('#mobileMenu') && !e.target.closest('#menuToggle') && mobileMenu.classList.contains('active')) {
-      mobileMenu.classList.remove('active');
-      menuToggle.classList.remove('active');
-    }
-    if (!e.target.closest('#settingsPanel') && !e.target.closest('#settingsToggle') && settingsPanel.classList.contains('active')) {
-      settingsPanel.classList.remove('active');
-    }
-  });
 </script>
 
 
