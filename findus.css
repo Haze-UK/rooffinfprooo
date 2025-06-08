@@ -1,6 +1,6 @@
 .map-section {
   position: relative;
-  padding: 120px 20px;
+  padding: 100px 20px;
   z-index: 1;
   overflow: hidden;
 }
@@ -8,34 +8,37 @@
 .map-gradient-bg {
   position: absolute;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), #8e0000 60%, black 100%), 
-              url('assets/findus.png') center/cover no-repeat;
-  z-index: 0;
+  background: linear-gradient(to bottom, #8e0000 5%, rgba(0, 0, 0, 0.15) 95%),
+              url('/path-to-uploaded-image/39986663-7293-464b-839b-b3cf87b41061.png') center/cover no-repeat;
   opacity: 0.25;
+  z-index: 0;
 }
 
 .map-glass-card {
   position: relative;
   max-width: 700px;
   margin: 0 auto;
+  padding: 40px 30px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
   border-radius: 20px;
-  padding: 40px 30px;
-  text-align: center;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
   z-index: 2;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 
-.section-title {
+/* Reuse section title styling */
+.section-header {
   font-size: 2rem;
-  color: white;
-  margin-bottom: 30px;
+  font-weight: 700;
+  color: #ffffff;
   text-transform: uppercase;
   letter-spacing: 1px;
+  margin-bottom: 30px;
 }
 
+/* CTA Button */
 .map-cta {
   display: inline-block;
   margin-top: 30px;
