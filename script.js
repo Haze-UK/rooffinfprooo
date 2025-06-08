@@ -69,3 +69,9 @@ document.getElementById('settingsToggle').addEventListener('click', () => {
   document.getElementById('settingsPanel').classList.toggle('active');
   document.getElementById('mobileMenu').classList.remove('active'); // Close menu if open
 });
+
+<style>
+  html {
+    scroll-behavior: smooth;
+  }
+</style>
