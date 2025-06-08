@@ -56,16 +56,15 @@
   transition: all 0.3s ease;
 }
 
-/* Optional: transform hamburger into 'X' on open */
-.slide-menu.active ~ .main-header .menu-icon span:nth-child(1) {
+.menu-icon.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
 
-.slide-menu.active ~ .main-header .menu-icon span:nth-child(2) {
+.menu-icon.active span:nth-child(2) {
   opacity: 0;
 }
 
-.slide-menu.active ~ .main-header .menu-icon span:nth-child(3) {
+.menu-icon.active span:nth-child(3) {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
@@ -81,7 +80,7 @@
 .slide-menu {
   position: fixed;
   top: 0;
-  left: -260px;
+  left: -100%;
   width: 240px;
   height: 100%;
   background: rgba(0, 0, 0, 0.96);
@@ -119,7 +118,7 @@
 .settings-panel {
   position: fixed;
   top: 0;
-  right: -260px;
+  right: -100%;
   width: 240px;
   height: 100%;
   background: rgba(20, 20, 20, 0.95);
