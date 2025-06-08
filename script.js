@@ -58,21 +58,35 @@ if (container) {
   }, 5000); // Change testimonial every 5 seconds
 }
 
-const menuToggle = document.getElementById('menuToggle');
-const mobileMenu = document.getElementById('mobileMenu');
-const settingsToggle = document.getElementById('settingsToggle');
-const settingsPanel = document.getElementById('settingsPanel');
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+  const settingsToggle = document.getElementById('settingsToggle');
+  const settingsPanel = document.getElementById('settingsPanel');
 
-menuToggle.addEventListener('click', () => {
-  const isActive = mobileMenu.classList.contains('active');
-  mobileMenu.classList.toggle('active', !isActive);
-  settingsPanel.classList.remove('active');
-});
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+    menuToggle.classList.toggle('active'); // Animate icon to X
+    settingsPanel.classList.remove('active'); // Close settings
+  });
 
-settingsToggle.addEventListener('click', () => {
-  const isActive = settingsPanel.classList.contains('active');
-  settingsPanel.classList.toggle('active', !isActive);
-  mobileMenu.classList.remove('active');
-});
+  settingsToggle.addEventListener('click', () => {
+    settingsPanel.classList.toggle('active');
+    mobileMenu.classList.remove('active'); // Close menu
+    menuToggle.classList.remove('active'); // Reset icon to hamburger
+  });
+
+  // Optional: close menus when clicking outside
+  document.addEventListener('click', (e) => {
+    if (!e.target.closest('#mobileMenu') && !e.target.closest('#menuToggle') && mobileMenu.classList.contains('active')) {
+      mobileMenu.classList.remove('active');
+      menuToggle.classList.remove('active');
+    }
+    if (!e.target.closest('#settingsPanel') && !e.target.closest('#settingsToggle') && settingsPanel.classList.contains('active')) {
+      settingsPanel.classList.remove('active');
+    }
+  });
+</script>
+
 
 
