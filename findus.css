@@ -1,0 +1,53 @@
+.map-section {
+  position: relative;
+  padding: 120px 20px;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.map-gradient-bg {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.12), #8e0000 60%, black 100%), 
+              url('/path-to-uploaded-image/39986663-7293-464b-839b-b3cf87b41061.png') center/cover no-repeat;
+  z-index: 0;
+  opacity: 0.25;
+}
+
+.map-glass-card {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  z-index: 2;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.section-title {
+  font-size: 2rem;
+  color: white;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.map-cta {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 14px 28px;
+  background: #8e0000;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background 0.3s ease;
+}
+
+.map-cta:hover {
+  background: #a30000;
+}
