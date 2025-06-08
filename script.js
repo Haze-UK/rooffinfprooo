@@ -70,8 +70,4 @@ document.getElementById('settingsToggle').addEventListener('click', () => {
   document.getElementById('mobileMenu').classList.remove('active'); // Close menu if open
 });
 
-<style>
-  html {
-    scroll-behavior: smooth;
-  }
-</style>
+
