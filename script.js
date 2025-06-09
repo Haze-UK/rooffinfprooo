@@ -10,7 +10,7 @@ const testimonials = [
     stars: 4,
     text: "Quick repair and transparent pricing. I appreciated the photo updates during the work.",
     author: "John R.",
-    meta: "1 month ago Â· Google"
+    meta: "1 month ago · Google"
   }
 ];
 
@@ -26,7 +26,7 @@ function renderTestimonial(index) {
       <div class="testimonial-text">â€œ${t.text}â€</div>
       <div class="testimonial-author">${t.author}</div>
       <div class="testimonial-meta">${t.meta}</div>
-      <div class="quote-icon">â€</div>
+      <div class="quote-icon">"</div>
     </div>
   `;
 }
