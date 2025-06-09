@@ -4,7 +4,7 @@ const testimonials = [
     stars: 5,
     text: "Excellent team. Very responsive and professional. I would recommend them to anyone!",
     author: "Jane D.",
-    meta: "2 months ago Â· Google"
+    meta: "2 months ago · Google"
   },
   {
     stars: 4,
@@ -19,14 +19,13 @@ const container = document.getElementById("testimonial-slider");
 
 function renderTestimonial(index) {
   const t = testimonials[index];
-  const stars = 'â˜…'.repeat(t.stars) + 'â˜†'.repeat(5 - t.stars);
+  const stars = '★'.repeat(t.stars) + '☆'.repeat(5 - t.stars); // Correct Unicode stars
   container.innerHTML = `
     <div class="testimonial-slide active">
       <div class="testimonial-stars">${stars}</div>
-      <div class="testimonial-text">â€œ${t.text}â€</div>
+      <div class="testimonial-text">"${t.text}"</div>
       <div class="testimonial-author">${t.author}</div>
       <div class="testimonial-meta">${t.meta}</div>
-      <div class="quote-icon">"</div>
     </div>
   `;
 }
